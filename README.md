@@ -11,12 +11,12 @@ This repository hosts the necessary scripts to create labeled data for tomograms
     1. Install homebrew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
     2. Install miniforge using `brew install --cask miniforge`.
 2. Install ITK-SNAP, the GUI used to actually annotate (Download [here](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3))
-3. Clone this github repository using `git clone https://github.com/byu-biophysics/manual_tomo_annotate.git` in the terminal.
+3. Clone this github repository
 4. In the terminal, navigate to the folder manual_tomo_annotate and run the command `chmod +x env_setup.sh`. This will make the setup script executable.
 5. Run `./env_setup.sh` to build the conda environment and folder structure for annotating. This script will automatically name the conda environment `annotate`, but if you already have an enviornment named this run `./env_setup.sh -n <conda_env_name>` to create the enviornment with a different name.
 
 #### Use
-1. Activate the conda environment using `conda activate annotate` or `conda activate <conda_env_name>` if you named it something different.
+1. Activate the conda environment using `conda activate annotate` or `conda activate <conda_env_name>` if you named it something else.
 2. Run `annotate.sh -d <dataset_id> -r <run_id>` to download a tomogram and segment.
 3. Save the segmentation image as described below in the File Convention section.
 
